@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="heroEffect.css">
+</head>
+<body>
+    <header class="header">  
+      <div class="logo">
+        <div class="logo-text">Mallapur Bangiya Sangha</div>
+        <div class="mobile-logo">MBS</div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+    
+      <div class="header_texture" id="texture_text">
+        <p class="texture_text">মল্লাপুর বঙ্গীয় সংঘ</p>
+      </div> 
+    </header>
+    
+    <div class="area">
+        <h1 class="mass">404</h1>
+        <p class="content" style="text-align: right; padding-right: 5%;font-size: clamp(15px,4vw,30px); ">THE PAGE YOU SEARCHED FOR<br><span style="font-weight: 800;">DOES NOT EXIST</span></p>
+    </div>
+    <div class="footer">
+        <div class="title-container">
+          <h1 class="titleFooter">MBS</h1>
+        </div>
+        <p>© 2025 Mallapur Bangiya Sangha<br><span style="font-weight: 200;">VoidWorks</span></p>
+      </div>
+      <style>
+        .area{
+            width: 100dvw;
+            height: 61dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mass{
+            opacity: 0.5;
+            color:#000;
+            font-size: clamp(100px,23.45vw,350px);
+            padding-left: 5%;
+        }
+      </style>
+      <script>
+        console.log("I loaded")
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          menu.classList.toggle('open');
+          console.log("Hamburger Toggle")
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!hamburger.contains(e.target) && !menu.contains(e.target) && menu.classList.contains('open')) {
+            hamburger.classList.remove('open');
+            menu.classList.remove('open');
+          }
+        });
+
+
+      </script>
+      
+</body>
+</html>
