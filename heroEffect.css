@@ -96,3 +96,11 @@
   height: 100px;
   width: 250px;
 }
+
+
+@media (max-width:768px){
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+

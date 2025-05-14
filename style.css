@@ -20,7 +20,11 @@
 html{
     background-color: var(--durga-creme);
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -33,6 +37,7 @@ body {
   color: inherit;         /* Makes the link take on the text color of its parent */
   text-decoration: none;
 }
+
 
 .header {
   position: sticky;
@@ -406,6 +411,7 @@ main{
   justify-content: center;
   align-items: center;
   padding: 20px; /* Add padding for better spacing */
+  width: 100vw;
 }
 
 #AboutUsPreface #funText {
@@ -432,6 +438,7 @@ main{
   -webkit-font-smoothing: antialiased;
   background-clip: text;
   -moz-background-clip: text;
+  z-index: 3;
 }
 
 /* Responsiveness */
@@ -555,19 +562,6 @@ main{
 }
 
 
-.subtitle a:hover{
-  color: transparent; /* Makes the fill transparent */
-  background-image: url("src/met.gif");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: left;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  background-clip: text;
-  -moz-background-clip: text;
-}
-
 #Partner {
   background-color: var(--durga-creme);
   padding: 0 clamp(2%, 4vw, 5%);
@@ -590,8 +584,8 @@ main{
   align-items: flex-start;
   box-sizing: border-box;
 }
-#Contact a:hover{
-  color: transparent; /* Makes the fill transparent */
+#Contact a:hover span{
+  color: black; /* Makes the fill transparent */
   background-image: url("src/met.gif");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -692,4 +686,37 @@ main{
   .titleFooter {
     font-size: clamp(24px, 4vw, 60px);
   }
+}
+.animated-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+
+/*LOADING stuff*/
+
+#loader {
+    position: fixed;
+    z-index: 10000;
+    background-color: var(--durga-creme);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg * {
+    transition: stroke-dashoffset 0.3s ease, fill-opacity 0.3s ease;
+}
+
+#loaderSVG{
+  fill:transparent;
+  stroke-dashoffset: 1912.2020263671875;
+}
+
+.fill-complete {
+    transition: fill 1s ease;
+    fill: var(--durga-red) !important;
 }
