@@ -1,0 +1,61 @@
+{
+    "events":[
+        {
+           "name":"Sri Sri Sharadiya Durgotsav 2025",
+            "date":"UPCOMING",
+            "imageFolderName":"misc",
+            "description":"UPCOMING",
+            "cover":"upcoming.jpg",
+            "year":2025,
+            "contentInfo":[
+                {   
+                    "metadata":"section is a boolean. if flase dont create under a section, if not create 1",
+                    "section":false,
+                    "text":"Nothing for now but filling up very soon!",
+                    "class":"eventTitle"
+                }
+            ]
+        },
+        {
+            "name":"Sri Sri Sharadiya Durgotsav 2024",
+            "date":"2024 Sept",
+            "imageFolderName":"sdp2024",
+            "description":"The first ever MBS event",
+            "cover":"21.jpg",
+            "year":2024,
+            "contentInfo":[
+                {   
+                    "metadata":"section is a boolean. if flase dont create under a section, if not create 1",
+                    "section":false,
+                    "text":"Before all, massive thanks to",
+                    "class":"eventTitle"
+                },{
+                    "section":true,
+                    "heading":"Sri. Bandari Lakshma Reddy Garu",
+                    "content":"Qui consequat magna esse mollit dolor ex velit eu dolor ad ad qui. Labore elit sint velit ea sit ex consectetur nulla do adipisicing cillum do consequat ea. Nisi do eiusmod magna occaecat tempor ea enim et pariatur fugiat enim dolor dolore. Deserunt incididunt sint occaecat consectetur ipsum id minim laboris irure consectetur sint irure quis. Commodo cupidatat aute deserunt aliqua. Labore nulla cillum deserunt eiusmod.",
+                    "imageSource":"url",
+                    "imageUrl":"https://www.mallapurbangiyasangha.org/resources/sdp2024/gallery/B_Lakshma_Reddy.jpg",
+                    "imageSubtitle":"Honourable Guest",
+                    "imageCircle":false,
+                    "metadata":"imageSource can be file or url. For file, relative location with .jpg or .png will be provided. If IimageCirlce is true add the circle class"
+                },{
+                    "section":true,
+                    "mapLocation":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.26547044478!2d78.56710891034443!3d17.44700348338135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c0500000001%3A0x7ca799437a41db60!2sVNR%20Gardens!5e0!3m2!1sen!2sin!4v1747569772048!5m2!1sen!2sin"
+                },
+                {
+                    "section":true,
+                    "heading":"Sri. Bandari Lakshma Reddy Garu",
+                    "content":"Qui consequat magna esse mollit dolor ex velit eu dolor ad ad qui. Labore elit sint velit ea sit ex consectetur nulla do adipisicing cillum do consequat ea. Nisi do eiusmod magna occaecat tempor ea enim et pariatur fugiat enim dolor dolore. Deserunt incididunt sint occaecat consectetur ipsum id minim laboris irure consectetur sint irure quis. Commodo cupidatat aute deserunt aliqua. Labore nulla cillum deserunt eiusmod.",
+                    "imageSource":"url",
+                    "imageUrl":"https://www.mallapurbangiyasangha.org/resources/sdp2024/gallery/B_Lakshma_Reddy.jpg",
+                    "imageSubtitle":"Honourable Guest",
+                    "imageCircle":false,
+                    "metadata":"imageSource can be file or url. For file, relative location with .jpg or .png will be provided. If IimageCirlce is true add the circle class"
+                },
+                {
+                    "imageGallery":true
+                }
+            ]
+        }
+    ]
+}

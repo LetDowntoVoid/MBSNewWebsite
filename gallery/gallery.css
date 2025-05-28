@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --durga-red: #af2f02;
+  --durga-yellow: #e9c323;
+  --durga-creme: #ebded0;
+  --text-brown: #2b120a;
+}
+
+.yel{
+  color:var(--durga-yellow);
+}
+
+.red{
+  color: var(--durga-red);
+}
+
+.fullscreen{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100dvw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+html{
+    background-color: #111111;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.camo{
+  color: inherit;         
+  text-decoration: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 1000;
+  background-color: transparent;
+  border-radius: 30px;
+  margin: 10px;
+  width: calc(100% - 20px);
+  border: 3px solid var(--text-brown);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  color: var(--text-brown);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  
+}
+
+.mobile-logo {
+  display: none;
+  font-weight: 700;
+  color: var(--text-brown);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 2001;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--text-brown);
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+  background: var(--text-brown);
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+  background: var(--text-brown);
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+  background: var(--text-brown);
+}
+
+.hamburger.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+  background: var(--durga-creme);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  background: var(--durga-creme);
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+  background: var(--durga-creme);
+}
+
+.menu {
+  position: fixed;
+  top: -100%;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background: var(--text-brown);
+  transition: all 0.5s cubic-bezier(.12,.85,.58,1);
+  padding: 6rem 2rem 2rem;
+  z-index: 1500;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu.open {
+  top: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 1.5rem 0;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.menu ul li:hover {
+  transform: rotate(0deg);
+}
+
+.menu ul li a {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-decoration: none;
+  color: var(--durga-creme);
+  font-size: 1.2rem;
+  font-weight: 200;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.menu ul li a:hover {
+  color: var(--durga-red);
+}
+
+@media (max-width: 768px) {
+  .header {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: white;
+  }
+  
+  .header::before {
+    display: none;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+  
+  .mobile-logo {
+    display: block;
+  }
+  
+  .menu {
+    width: 100%;
+  }
+}
+
+.header_texture{
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height:85.5%;
+  transform: translateX(-2.5%);
+}
+
+.header_texture p{
+  font-weight: 600;
+  font-size:125px;
+  white-space: nowrap;
+  color: rgba(0,0,0,0.2);
+  transform: translateX(2.51%);
+}
+
+canvas {
+  display: block;
+}
+
+.drop_in{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop_in_title{
+  position: absolute;
+  font-size: clamp(50px, 14vw + 1rem, 275px);
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: var(--durga-creme);
+}
+
+.title_outline{
+  color: transparent;
+  -webkit-text-stroke: 0.75px var(--durga-creme);
+  text-stroke: 0.75px var(--durga-creme); 
+}
+.cnv{
+  z-index: 2;
+}
+
+.scrolled_texts {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100dvh;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.textOnlySec{
+  font-size: clamp(3rem, 15vw + 1rem, 31.25rem);
+}
+
+.halfwidthbuffer{
+  flex: 0 0 50vw;
+  height: 100dvh;
+  scroll-snap-align: start;
+}
+
+.section_scroll {
+  flex: 0 0 100vw;
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  background-color: #222222;
+  aspect-ratio: 3 / 2;
+  width: clamp(400px, 60vw, 960px);
+  max-height: 90dvh;
+  border-radius: 1rem;
+  position: relative; 
+  overflow: hidden;
+
+}
+
+.card_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1rem, 4vw + 0.5rem, 3rem);
+  margin: 0.5rem;
+  padding-left: 2%;
+  width: 50%;
+}
+
+.card_title > .card_desc{
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.5rem, 1rem, 1.25rem);
+  font-weight: 400;
+}
+
+.card_date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(0.75rem, 2vw + 0.25rem, 1.5rem);
+  margin: 0.5rem;
+  text-align: right;
+}
+
+.card_background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  z-index: 0;
+  
+}
+
+.showMeMore{
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .scrolled_texts {
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+
+  .section_scroll {
+    flex: none;
+    width: 100vw;
+    height: 45vh !important;
+    scroll-snap-align: none;
+  }
+
+}
+
+.eventInfo {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(180%) blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.eventInfo.active {
+    opacity: 1;
+    pointer-events: all;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .eventInfo {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+.eventBody {
+    width: 90dvw;
+    height: 90dvh;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.scrollable-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: max-content;
+    height: 100%;
+}
+.eventBodyTitle {
+    color: var(--durga-creme);
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-orientation: mixed;
+    font-size: clamp(50px, 10vw, 125px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-shrink: 0;
+    width: 70dvw;
+    text-align: left;
+}
+.eventDate {
+    color: var(--durga-creme);
+    font-family: "Montserrat", sans-serif;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    font-size: clamp(25px, 5vw, 50px);
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--durga-creme);
+    color: #1a1a1a;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10001;
+}
+
+@media (max-width: 768px) {
+    .eventBody {
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 2rem 1rem;
+    }
+    .scrollable-content {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        gap: 2rem;
+    }
+    .eventBodyTitle,
+    .eventTitle {
+        width: 100%;
+        writing-mode: initial;
+        text-orientation: initial;
+        font-size: clamp(30px, 8vw, 60px);
+        min-height: auto;
+        padding: 1rem 0;
+    }
+    .eventDate {
+        writing-mode: initial;
+        text-orientation: initial;
+        font-size: clamp(20px, 6vw, 40px);
+        min-width: auto;
+        width: 100%;
+        min-height: auto;
+        padding: 1rem 0;
+    }
+    .close-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--durga-creme);
+  color: #1a1a1a;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10001;
+  display: flex;               
+  align-items: center;         
+  justify-content: center;   
+  line-height: 1;
+}
+.eventBodyTitle,
+.eventTitle,
+.eventDate {
+  overflow: visible;
+}
+
+#scrollable-content{
+  width: max-content;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  transform: translate3d(0, 0, 0);
+}
+
+.eventTitle {
+  color: var(--durga-creme);
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-orientation: mixed;
+  font-size: clamp(25px, 5vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-shrink: 0;
+  width: 30dvw;
+  text-align: left;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: row;      /* default: left-aligned horizontal layout */
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: auto;
+  gap: 0.5rem;
+  text-align: left;
+  height: 90dvh;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.imageWrapper.circle .sectionImage {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.sectionImage {
+  display: block;
+  max-height: 50dvh;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.infoSubtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--durga-creme);
+  margin: 0;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoTitle {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: clamp(20px, 4vw, 35px);
+  margin: 0;
+  color: var(--durga-creme);
+  width: 30dvw;
+}
+
+.infoContent {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--durga-creme);
+  margin: 0;
+  width: 50dvw;
+}
+
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_iframe {
+  height: 400px !important;
+  width: 50dvw;
+  filter: invert(90%) hue-rotate(180deg) brightness(80%) contrast(90%);
+}
+
+.scrollGrid {
+    position: relative;
+    height: 100%;
+    width: max-content;
+    min-width: 100%;
+}
+.manItem {
+    position: absolute;
+    width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+.manImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .infoSection {
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+  }
+
+  .imageWrapper.circle .sectionImage {
+    width: 60px;
+    height: 60px;
+  }
+}

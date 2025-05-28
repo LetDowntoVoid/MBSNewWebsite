@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Gallery - MBS Hyd</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Locomotive CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <!-- Locomotive JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    
+</head>
+<body>
+    <div class="fullscreen eventInfo" id="eventModal">
+      <button class="close-btn" id="closeBtn">&times;</button>
+        <div class="eventBody" id="scrollableContent">
+          
+        </div>
+      </div>
+    </div>
+    <header class="header" id="Home">  
+      <div class="logo">
+        <div class="logo-text">Mallapur Bangiya Sangha</div>
+        <div class="mobile-logo">MBS</div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+          <ul>
+            <li><a href="404.html">Home</a></li>
+            <li><a href="404.html">About Us</a></li>
+            <li><a href="./">Events and Gallery</a></li>
+            <li><a href="404.html">Contact</a></li>
+          </ul>
+      </nav>
+    
+      <div class="header_texture" id="texture_text">
+        <p class="texture_text">মল্লাপুর বঙ্গীয় সংঘ</p>
+      </div> 
+    </header>
+    <div class="fullscreen drop_in">
+      <h1 class="drop_in_title"  style="z-index: 1;">EVENTS</h1>
+      <div class="cnv" style="width: 100%; height: 100%;"></div>
+      <h1 class="drop_in_title title_outline" style="z-index: 3;">EVENTS</h1>
+    </div>
+
+    <div class="scrolled_texts">
+           
+    </div>
+    
+
+    <div class="fullscreen"></div>
+</body>
+<script src="cardhandler.js"></script>
+<script src="gallery.js"></script>
+<script src="clickHandler.js" type="module"></script>
+</html>
